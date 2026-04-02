@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-padding-top: 6rem;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(15, 118, 110, 0.06), transparent 24%),
+    linear-gradient(to bottom, #fbfefe, #ffffff 18%, #fcfefe 100%);
+}
+
+::selection {
+  background: rgba(15, 118, 110, 0.18);
+}
+
+@layer base {
+  body {
+    @apply text-[15px] sm:text-base;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply text-ink;
+  }
+
+  p {
+    @apply leading-7 text-slate/85;
+  }
+
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  .section-shell {
+    @apply mx-auto max-w-6xl px-6 lg:px-10;
+  }
+
+  .panel {
+    @apply rounded-[28px] border border-line/90 bg-white shadow-panel;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.28em] text-teal;
+  }
+
+  .section-frame {
+    @apply rounded-[32px] border border-line/70 bg-white/90 shadow-panel backdrop-blur-sm;
+  }
+
+  .muted-rule {
+    @apply h-px w-16 bg-gradient-to-r from-teal/70 to-transparent;
+  }
+
+  .stat-grid {
+    background-image:
+      linear-gradient(to right, rgba(216, 229, 232, 0.5) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(216, 229, 232, 0.45) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}

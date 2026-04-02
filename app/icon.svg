@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="ICML 2026 Workshop on Hypothesis Testing icon">
+  <rect width="64" height="64" rx="14" fill="#123047" />
+  <path d="M14 46V20" stroke="#d8e5e8" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M14 46H50" stroke="#d8e5e8" stroke-width="2.5" stroke-linecap="round" />
+  <path d="M18 39L25 33L31 36L40 24L48 18" fill="none" stroke="#7dd3c7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="25" cy="33" r="2.3" fill="#ffffff" />
+  <circle cx="31" cy="36" r="2.3" fill="#ffffff" />
+  <circle cx="40" cy="24" r="2.3" fill="#ffffff" />
+  <circle cx="48" cy="18" r="2.3" fill="#ffffff" />
+</svg>
