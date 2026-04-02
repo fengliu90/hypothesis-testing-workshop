@@ -112,6 +112,7 @@ npm run start
 - `app/icon.svg`: Simple site icon used for browser tabs and app metadata
 - `components/`: Reusable UI components
 - `data/workshop.ts`: Centralized workshop content, links, dates, and editable metadata
+- `features/flyer/`: Flyer-specific components and data adapters for A4/social exports
 
 ## Editing content
 
@@ -131,6 +132,46 @@ Headshot image folders:
 - Speaker images can be placed in `public/speakers/`
 - Organizer images can be placed in `public/organizers/`
 - Example data value: `headshot: "/organizers/feng-liu.jpg"`
+
+## Flyer export
+
+The project now includes two flyer routes that reuse the current workshop content and headshots:
+
+- A4 portrait flyer: `http://localhost:3001/flyer`
+- Social flyer (1080x1350): `http://localhost:3001/flyer/social`
+
+Recommended export workflow:
+
+1. Start the app with `npm run dev`.
+2. Open the flyer route you want.
+3. For the A4 version, use your browser's print dialog and save as PDF.
+   Use portrait orientation, no browser headers/footers, and default scale.
+4. For the social version, capture/export the page at full size from the browser or a design/screenshot tool.
+
+Notes:
+
+- The flyer content is rendered from `data/workshop.ts`, so website copy and flyer copy stay aligned.
+- Flyer-specific presentation logic is isolated under `features/flyer/`.
+- The social route uses a 1080x1350 canvas ratio for LinkedIn/X sharing.
+- The QR code points to `https://hypothesis-testing-workshop.vercel.app`.
+- If a final OpenReview URL is added to `data/workshop.ts`, the flyer button will automatically become clickable.
+
+## Smoke test checklist
+
+After content or layout changes, run `npm run dev` and verify these routes:
+
+- `/`
+  - Homepage loads without errors.
+  - Navigation anchors work.
+  - Speaker and organizer sections render.
+- `/flyer`
+  - A4 flyer layout loads as a single portrait page.
+  - Important dates, keynote headshots, organizer strip, and footer render cleanly.
+  - Browser print preview looks correct for PDF export.
+- `/flyer/social`
+  - Social flyer loads in the 1080x1350 layout.
+  - Typography fits without overflow.
+  - QR code and submission area render correctly.
 
 ## Notes
 
