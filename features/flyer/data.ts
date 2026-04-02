@@ -5,9 +5,9 @@ const keynoteSpeakers = workshop.sections.speakers.items.filter(
 );
 
 const importantDates = [
-  "Submission deadline: 7 May 2026",
-  "Notification date: 7 June 2026",
-  "Camera-ready deadline: 28 June 2026",
+  "Submission deadline: 10 May 2026",
+  "Notification date: 26 May 2026",
+  "Camera-ready deadline: 17 June 2026",
   "Workshop date: July 10 or 11, 2026 (TBA)",
 ] as const;
 
