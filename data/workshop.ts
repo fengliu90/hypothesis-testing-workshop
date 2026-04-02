@@ -255,7 +255,7 @@ export const workshop = {
       eyebrow: "Organizers",
       title: "Workshop organizers",
       description:
-        "The organizing team brings together expertise from academia and industry across statistics and machine learning.",
+        "The organizing team (alphabetical order by surname) brings together expertise from academia and industry across statistics and machine learning.",
       items: [
         {
           name: "Xiuyuan Cheng",
