@@ -327,7 +327,7 @@ export const workshop = {
         {
           question: "Will there be a poster session?",
           answer:
-            "Yes. The planned schedule includes a poster presentation session, and accepted submissions may be selected for poster presentation.",
+            "Yes. The planned schedule includes a poster presentation session, and all accepted submissions will be presented as posters.",
         },
         {
           question: "How will contributed talks be selected?",
