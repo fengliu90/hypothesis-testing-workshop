@@ -289,7 +289,7 @@ export const workshop = {
           name: "Danica J. Sutherland",
           affiliation: "University of British Columbia",
           role: "Organizer",
-          headshot: "/organizers/dani.png",
+          headshot: "/organizers/danica.jpg",
           bio: "Researcher in machine learning and statistics with interests in testing, kernels, and reliable model evaluation.",
         },
         {
