@@ -17,5 +17,5 @@ export const flyerData = {
   organizers: workshop.sections.organizers.items,
   topics: workshop.sections.topics.groups,
   importantDates,
-  websiteUrl: "https://hypothesis-testing-workshop.vercel.app",
+  websiteUrl: "https://testing.ml",
 } as const;

@@ -326,7 +326,7 @@ export function Flyer({ variant }: FlyerProps) {
                 </div>
                 <div className="grid grid-cols-[88px_1fr] gap-3">
                   <dt className="font-semibold text-ink">Website</dt>
-                  <dd>hypothesis-testing-workshop.vercel.app</dd>
+                  <dd>testing.ml</dd>
                 </div>
                 <div className="grid grid-cols-[88px_1fr] gap-3">
                   <dt className="font-semibold text-ink">Contact</dt>
@@ -357,7 +357,7 @@ export function Flyer({ variant }: FlyerProps) {
                     Scan for the full workshop page, updates, and submission details.
                   </p>
                   <p className="mt-2 text-[0.8rem] leading-5 text-slate/68">
-                    hypothesis-testing-workshop.vercel.app
+                    testing.ml
                   </p>
                 </div>
                 <div className="mt-3">
