@@ -66,7 +66,7 @@ export const workshop = {
   },
   links: {
     // Update this when the main submission page is finalized.
-    submission: "https://openreview.net/group?id=ICML.cc/2026/Workshop/Hypothesis_Testing",
+    submission: "#call",
     // Update this with the final OpenReview forum URL.
     openReview: "https://openreview.net/group?id=ICML.cc/2026/Workshop/Hypothesis_Testing",
   },
