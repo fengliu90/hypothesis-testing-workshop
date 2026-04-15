@@ -150,8 +150,8 @@ export function Flyer({ variant }: FlyerProps) {
           <div className="absolute left-[7%] bottom-[16%] h-28 w-[24rem] rounded-full border border-teal/12" />
         </div>
 
-        <div className={`relative z-10 flex h-full flex-col ${isSocial ? "p-8" : "p-8 sm:p-10"}`}>
-          <header className="grid gap-7 border-b border-line/80 pb-7 lg:grid-cols-[1.12fr_0.88fr]">
+        <div className={`flyer-content relative z-10 flex h-full flex-col ${isSocial ? "p-8" : "p-8 sm:p-10"}`}>
+          <header className="flyer-header grid gap-7 border-b border-line/80 pb-7 lg:grid-cols-[1.12fr_0.88fr]">
             <div>
               <p className="eyebrow text-[12px]">{workshop.hero.eyebrow}</p>
               <div className="muted-rule mt-4" />
@@ -169,7 +169,7 @@ export function Flyer({ variant }: FlyerProps) {
               </p>
             </div>
 
-            <aside className="rounded-[30px] border border-teal/18 bg-[linear-gradient(180deg,rgba(15,118,110,0.07),rgba(255,255,255,0.97))] p-6 shadow-panel">
+            <aside className="flyer-dates rounded-[30px] border border-teal/18 bg-[linear-gradient(180deg,rgba(15,118,110,0.07),rgba(255,255,255,0.97))] p-6 shadow-panel">
               <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-teal">
                 Important Dates
               </p>
@@ -193,7 +193,7 @@ export function Flyer({ variant }: FlyerProps) {
             </aside>
           </header>
 
-          <section className="mt-6 rounded-[28px] border border-teal/20 bg-[linear-gradient(135deg,rgba(15,118,110,0.08),rgba(255,255,255,0.94))] px-5 py-5 shadow-panel">
+          <section className="flyer-submission mt-6 rounded-[28px] border border-teal/20 bg-[linear-gradient(135deg,rgba(15,118,110,0.08),rgba(255,255,255,0.94))] px-5 py-5 shadow-panel">
             <p className="text-[1rem] font-semibold leading-7 text-ink">
               We invite submissions on modern hypothesis testing in machine learning.
             </p>
@@ -212,12 +212,12 @@ export function Flyer({ variant }: FlyerProps) {
               {workshop.links.openReview.startsWith("http") ? (
                 <a
                   href={workshop.links.openReview}
-                  className="inline-flex items-center justify-center rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white"
+                  className="flyer-openreview inline-flex items-center justify-center rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white"
                 >
                   {workshop.sections.callForPapers.submitButtonLabel}
                 </a>
               ) : (
-                <div className="inline-flex items-center justify-center rounded-full border border-ink/15 bg-ink px-5 py-2.5 text-sm font-semibold text-white">
+                <div className="flyer-openreview inline-flex items-center justify-center rounded-full border border-ink/15 bg-ink px-5 py-2.5 text-sm font-semibold text-white">
                   Submit via OpenReview
                   <span className="ml-2 text-white/70">Link forthcoming</span>
                 </div>
@@ -225,7 +225,7 @@ export function Flyer({ variant }: FlyerProps) {
             </div>
           </section>
 
-          <section className="mt-7">
+          <section className="flyer-keynotes mt-7">
             <div className="flex items-end justify-between gap-4">
               <div>
                 <p className="eyebrow text-[11px]">Confirmed Keynote Speakers</p>
@@ -234,22 +234,22 @@ export function Flyer({ variant }: FlyerProps) {
                 </h3>
               </div>
             </div>
-            <div className={`mt-5 grid gap-4 ${isSocial ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1 md:grid-cols-2"}`}>
+            <div className={`flyer-keynote-grid mt-5 grid gap-4 ${isSocial ? "grid-cols-1 sm:grid-cols-2" : "grid-cols-1 md:grid-cols-2"}`}>
               {keynoteSpeakers.map((speaker) => (
                 <KeynoteCard key={speaker.name} speaker={speaker} compact={isSocial} />
               ))}
             </div>
           </section>
 
-          <section className={`mt-6 grid gap-5 ${isSocial ? "grid-cols-1" : "lg:grid-cols-[1.08fr_0.92fr]"}`}>
-            <div className="grid gap-5 md:grid-cols-2">
+          <section className={`flyer-topic-snapshot mt-6 grid gap-5 ${isSocial ? "grid-cols-1" : "lg:grid-cols-[1.08fr_0.92fr]"}`}>
+            <div className="flyer-topic-grid grid gap-5 md:grid-cols-2">
               {topics.map((topic) => (
                 <TopicCard key={topic.title} title={topic.title} items={topic.items} />
               ))}
             </div>
 
-            <div className="rounded-[28px] border border-line/85 bg-white/92 p-5 shadow-panel">
-              <p className="eyebrow text-[11px]">Workshop Snapshot</p>
+            <div className="flyer-snapshot rounded-[28px] border border-line/85 bg-white/92 p-5 shadow-panel">
+              <p className="eyebrow text-[11px]">Workshop Information</p>
               <div className="muted-rule mt-4" />
               <p className="mt-5 text-[0.95rem] leading-7 text-slate/80">
                 A workshop bringing together researchers developing modern testing
@@ -276,6 +276,14 @@ export function Flyer({ variant }: FlyerProps) {
                 </div>
                 <div className="rounded-[20px] border border-line/70 bg-mist/35 px-4 py-3">
                   <dt className="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate/58">
+                    Website
+                  </dt>
+                  <dd className="mt-1 font-medium text-ink">
+                    testing.ml
+                  </dd>
+                </div>
+                <div className="rounded-[20px] border border-line/70 bg-mist/35 px-4 py-3">
+                  <dt className="text-[10px] font-semibold uppercase tracking-[0.22em] text-slate/58">
                     Contact
                   </dt>
                   <dd className="mt-1 font-medium text-ink">
@@ -286,7 +294,7 @@ export function Flyer({ variant }: FlyerProps) {
             </div>
           </section>
 
-          <section className="mt-7 rounded-[28px] border border-line/85 bg-white/90 p-5 shadow-panel">
+          <section className="flyer-organizers mt-7 rounded-[28px] border border-line/85 bg-white/90 p-5 shadow-panel">
             <div className="flex flex-col gap-3 border-b border-line/75 pb-4 sm:flex-row sm:items-end sm:justify-between">
               <div>
                 <h3 className="mt-2 font-serif text-[1.42rem] leading-tight tracking-[-0.02em] text-ink">
@@ -294,7 +302,7 @@ export function Flyer({ variant }: FlyerProps) {
                 </h3>
               </div>
             </div>
-            <div className={`mt-5 grid gap-x-4 gap-y-5 ${isSocial ? "grid-cols-3" : "grid-cols-3 md:grid-cols-6"}`}>
+            <div className={`flyer-organizer-grid mt-5 grid gap-x-4 gap-y-5 ${isSocial ? "grid-cols-3" : "grid-cols-3 md:grid-cols-6"}`}>
               {organizers.map((organizer) => (
                 <OrganizerCard
                   key={organizer.name}
@@ -305,37 +313,8 @@ export function Flyer({ variant }: FlyerProps) {
             </div>
           </section>
 
-          <footer className="mt-6 grid gap-5 border-t border-line/80 pt-5 md:grid-cols-[1.14fr_0.86fr]">
-            <div className="rounded-[24px] border border-line/80 bg-white/90 p-5 shadow-panel">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-teal">
-                Workshop Information
-              </p>
-              <div className="muted-rule mt-3" />
-              <dl className="mt-4 grid gap-3 text-[0.9rem] leading-6 text-slate/82">
-                <div className="grid grid-cols-[88px_1fr] gap-3">
-                  <dt className="font-semibold text-ink">Event</dt>
-                  <dd>ICML 2026</dd>
-                </div>
-                <div className="grid grid-cols-[88px_1fr] gap-3">
-                  <dt className="font-semibold text-ink">Venue</dt>
-                  <dd>The COEX Convention & Exhibition Center, Seoul, South Korea</dd>
-                </div>
-                <div className="grid grid-cols-[88px_1fr] gap-3">
-                  <dt className="font-semibold text-ink">Date</dt>
-                  <dd>July 10 or 11, 2026 (TBA)</dd>
-                </div>
-                <div className="grid grid-cols-[88px_1fr] gap-3">
-                  <dt className="font-semibold text-ink">Website</dt>
-                  <dd>testing.ml</dd>
-                </div>
-                <div className="grid grid-cols-[88px_1fr] gap-3">
-                  <dt className="font-semibold text-ink">Contact</dt>
-                  <dd>{workshop.site.contactEmail}</dd>
-                </div>
-              </dl>
-            </div>
-
-            <div className="grid grid-cols-[96px_1fr] gap-4 rounded-[24px] border border-line/80 bg-white/90 p-4 shadow-panel">
+          <footer className="flyer-footer mt-6 border-t border-line/80 pt-5">
+            <div className="grid grid-cols-[96px_1fr_auto] items-center gap-4 rounded-[24px] border border-line/80 bg-white/90 p-4 shadow-panel">
               <a
                 href={websiteUrl}
                 aria-label="Workshop website QR code"
@@ -360,16 +339,18 @@ export function Flyer({ variant }: FlyerProps) {
                     testing.ml
                   </p>
                 </div>
+              </div>
+              <div className="justify-self-end">
                 <div className="mt-3">
                   {workshop.links.openReview.startsWith("http") ? (
                     <a
                       href={workshop.links.openReview}
-                      className="inline-flex rounded-full border border-ink bg-ink px-4 py-2 text-sm font-semibold text-white"
+                      className="flyer-openreview inline-flex rounded-full border border-ink bg-ink px-4 py-2 text-sm font-semibold text-white"
                     >
                       Submit via OpenReview
                     </a>
                   ) : (
-                    <div className="inline-flex rounded-full border border-line bg-mist/50 px-4 py-2 text-sm font-semibold text-ink">
+                    <div className="flyer-openreview inline-flex rounded-full border border-line bg-mist/50 px-4 py-2 text-sm font-semibold text-ink">
                       Submit via OpenReview
                     </div>
                   )}
