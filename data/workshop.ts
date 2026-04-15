@@ -255,7 +255,14 @@ export const workshop = {
       eyebrow: "Organizers",
       title: "Workshop organizers",
       description:
-        "The organizing team (alphabetical order by surname) brings together expertise from academia and industry across statistics and machine learning. If you are interested in being a program committee member (i.e., reviewing submissions), please fill out this Google form: https://docs.google.com/forms/d/e/1FAIpQLSddz5AxGWOgvX3a5v5GRmudXIC5XfKH3z0s778PPmY6mgLCkw/viewform",
+        "The organizing team (alphabetical order by surname) brings together expertise from academia and industry across statistics and machine learning.",
+      reviewerRecruitment: {
+        text:
+          "If you are interested in being a program committee member (i.e., reviewing submissions), please fill out this",
+        linkLabel: "Google form",
+        href:
+          "https://docs.google.com/forms/d/e/1FAIpQLSddz5AxGWOgvX3a5v5GRmudXIC5XfKH3z0s778PPmY6mgLCkw/viewform",
+      },
       items: [
         {
           name: "Xiuyuan Cheng",

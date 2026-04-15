@@ -269,6 +269,16 @@ export default function Home() {
           title={sections.organizers.title}
           description={sections.organizers.description}
         />
+        <p className="mt-6 max-w-2xl text-sm leading-7 text-slate/80">
+          {sections.organizers.reviewerRecruitment.text}{" "}
+          <a
+            href={sections.organizers.reviewerRecruitment.href}
+            className="font-semibold text-teal underline decoration-line underline-offset-4 hover:text-ink"
+          >
+            {sections.organizers.reviewerRecruitment.linkLabel}
+          </a>
+          .
+        </p>
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {sections.organizers.items.map((organizer) => (
             <OrganizerCard key={organizer.name} organizer={organizer} />
