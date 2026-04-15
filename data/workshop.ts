@@ -185,7 +185,7 @@ export const workshop = {
       title:
         "We invite submissions on modern hypothesis testing in machine learning.",
       description:
-        "We welcome submissions on the theory, methodology, and practice of hypothesis testing in machine learning. The workshop is designed to bring together researchers developing new testing methods and researchers applying them in important ML domains. Submissions should follow the ICML 2026 format.",
+        "We welcome submissions on the theory, methodology, and practice of hypothesis testing in machine learning. The workshop is designed to bring together researchers developing new testing methods and researchers applying them in important ML domains. Submissions should follow the ICML 2026 format. If you have any questions regarding submissions, please first read FAQ section below. If questions remain, just email us :).",
       topicsTitle: "Topics of interest",
       topics: [
         "Theoretical advances in modern hypothesis testing",
@@ -255,7 +255,7 @@ export const workshop = {
       eyebrow: "Organizers",
       title: "Workshop organizers",
       description:
-        "The organizing team (alphabetical order by surname) brings together expertise from academia and industry across statistics and machine learning.",
+        "The organizing team (alphabetical order by surname) brings together expertise from academia and industry across statistics and machine learning. If you are interested in being a program committee member (i.e., reviewing submissions), please fill out this Google form: https://docs.google.com/forms/d/e/1FAIpQLSddz5AxGWOgvX3a5v5GRmudXIC5XfKH3z0s778PPmY6mgLCkw/viewform",
       items: [
         {
           name: "Xiuyuan Cheng",
@@ -335,9 +335,14 @@ export const workshop = {
             "Contributed talks will be selected from accepted submissions by the organizers based on relevance, quality, and fit with the workshop program.",
         },
         {
-          question: "Where should I submit?",
+          question: "Will the accepted workshop papers be archival (i.e., published in official proceedings)",
           answer:
-            "Submissions will be handled through OpenReview. The submission button will be updated with the final OpenReview link once it is available.",
+            "No, they will be non-archival. You can submit an on-going/under-review papers to this workshop. Besides, we also welcome papers already published in top venues.",
+        },
+        {
+          question: "Will the page limits apply to the whole paper (i.e., including references and appendix)",
+          answer:
+            "No, the page limits only apply to the main body of the paper.",
         },
       ] satisfies FAQ[],
     },
