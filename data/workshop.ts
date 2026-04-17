@@ -169,7 +169,7 @@ export const workshop = {
         {
           name: "TBA",
           affiliation: "TBA",
-          topic: "Medicine",
+          topic: "Application",
           headshot: null,
         },
         {
@@ -344,7 +344,7 @@ export const workshop = {
         {
           question: "Will the accepted workshop papers be archival (i.e., published in official proceedings)",
           answer:
-            "No, they will be non-archival. You can submit an on-going/under-review papers to this workshop. Besides, we also welcome papers already published in top venues (within three years).",
+            "No, they will be non-archival. You can submit early work and papers under review elsewhere without worrying about violating dual-submission policies. We also welcome recent papers that have already been published in top venues (within the last three years), including your ICML main-conference papers.",
         },
         {
           question: "Will the page limits apply to the whole paper (i.e., including references and appendix)",
