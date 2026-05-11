@@ -72,7 +72,7 @@ export const workshop = {
   },
   logistics: {
     // Update this once the workshop date is confirmed.
-    workshopDate: "Workshop date: July 10 or 11 (TBA)",
+    workshopDate: "Workshop date: July 11",
     // Update this once the ICML venue assignment is confirmed.
     venue: "Venue: The COEX Convention & Exhibition Center, Seoul, South Korea",
     registration: "Registration information: Follow the ICML 2026 registration page.",
@@ -200,10 +200,10 @@ export const workshop = {
       ],
       detailsTitle: "Submission details",
       deadlines: [
-        "Submission deadline: 10 May 2026",
-        "Notification date: 26 May 2026",
+        "Submission deadline: 12 May 2026 (extended)",
+        "Notification date: 22 May 2026",
         "Camera-ready deadline: 17 June 2026",
-        "Workshop date: July 10 or 11 (TBA)",
+        "Workshop date: July 11",
       ],
       note:
         "Accepted submissions may be presented as posters and some of them will be selected for contributed talks (i.e., orals).",
