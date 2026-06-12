@@ -202,7 +202,7 @@ export const workshop = {
       deadlines: [
         "Submission deadline: 12 May 2026 (extended)",
         "Notification date: 22 May 2026",
-        "Camera-ready deadline: 17 June 2026",
+        "Camera-ready deadline: 26 June 2026",
         "Workshop date: July 11",
       ],
       note:
