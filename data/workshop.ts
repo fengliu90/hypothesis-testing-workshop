@@ -169,12 +169,12 @@ export const workshop = {
         {
           name: "TBA",
           affiliation: "TBA",
-          topic: "Application",
+          topic: "TBA",
           headshot: null,
         },
         {
           name: "Yisong Yue",
-          affiliation: "Caltech and Latitude AI",
+          affiliation: "Caltech",
           topic: "Robotics / Control",
           headshot: "/speakers/yisong.jpg",
         },
