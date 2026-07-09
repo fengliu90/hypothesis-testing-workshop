@@ -53,6 +53,10 @@ export const workshop = {
   },
   navigation: {
     items: [
+      {
+        label: "Accepted Papers",
+        href: "https://openreview.net/group?id=ICML.cc/2026/Workshop/Hypothesis_Testing",
+      },
       { label: "Why", href: "#why" },
       { label: "Topics", href: "#topics" },
       { label: "Speakers", href: "#speakers" },
@@ -62,12 +66,13 @@ export const workshop = {
       { label: "Attend", href: "#attend" },
       { label: "FAQ", href: "#faq" },
     ] satisfies NavItem[],
-    submitLabel: "CFP",
+    submitLabel: "Accepted Papers",
   },
   links: {
     // Update this when the main submission page is finalized.
     submission: "#call",
-    // Update this with the final OpenReview forum URL.
+    acceptedPapers:
+      "https://openreview.net/group?id=ICML.cc/2026/Workshop/Hypothesis_Testing",
     openReview: "https://openreview.net/group?id=ICML.cc/2026/Workshop/Hypothesis_Testing",
   },
   logistics: {
@@ -80,13 +85,18 @@ export const workshop = {
   },
   hero: {
     eyebrow: "ICML 2026 Workshop",
-    primaryCtaLabel: "View Call for Papers",
-    primaryCtaHref: "#call",
+    primaryCtaLabel: "View Accepted Papers",
+    primaryCtaHref: "https://openreview.net/group?id=ICML.cc/2026/Workshop/Hypothesis_Testing",
     secondaryCtaLabel: "See Workshop Schedule",
     secondaryCtaHref: "#schedule",
+    acceptedPapersEyebrow: "Accepted papers now available",
+    acceptedPapersText:
+      "Browse the accepted workshop papers and author details on OpenReview.",
+    acceptedPapersButtonLabel: "Open accepted papers",
     glanceLabel: "At a glance",
-    submissionLabel: "Call for papers and submission details",
+    submissionLabel: "Accepted papers on OpenReview",
     highlights: [
+      "Accepted papers online",
       "6 invited speakers",
       "Contributed talks and posters",
       "Panel discussion",
@@ -202,7 +212,7 @@ export const workshop = {
       note:
         "Accepted submissions may be presented as posters and some of them will be selected for contributed talks (i.e., orals).",
       noteLabel: "Presentation format",
-      submitButtonLabel: "Submit via OpenReview",
+      submitButtonLabel: "View Accepted Papers",
     },
     schedule: {
       eyebrow: "Schedule",

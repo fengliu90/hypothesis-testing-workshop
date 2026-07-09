@@ -6,6 +6,9 @@ import { SectionTitle } from "@/components/section-title";
 import { SpeakerCard } from "@/components/speaker-card";
 import { workshop } from "@/data/workshop";
 
+const externalLinkProps = (href: string) =>
+  href.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {};
+
 export default function Home() {
   const { site, navigation, links, logistics, hero, sections } = workshop;
 
@@ -15,6 +18,7 @@ export default function Home() {
         items={navigation.items}
         homeLabel={site.shortTitle}
         submitLabel={navigation.submitLabel}
+        submitHref={links.acceptedPapers}
       />
 
       <section className="section-shell pt-14 pb-20 sm:pt-20 sm:pb-28 lg:pt-24">
@@ -33,6 +37,23 @@ export default function Home() {
               <p className="mt-7 max-w-2xl text-base leading-8 text-slate/76">
                 {site.description}
               </p>
+              <div className="mt-8 max-w-3xl border-l-4 border-teal bg-teal/[0.06] px-5 py-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-teal">
+                  {hero.acceptedPapersEyebrow}
+                </p>
+                <div className="mt-3 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+                  <p className="max-w-xl text-base leading-7 text-slate/82">
+                    {hero.acceptedPapersText}
+                  </p>
+                  <a
+                    href={links.acceptedPapers}
+                    className="inline-flex shrink-0 items-center justify-center rounded-full bg-teal px-5 py-2.5 text-sm font-semibold text-white hover:bg-ink"
+                    {...externalLinkProps(links.acceptedPapers)}
+                  >
+                    {hero.acceptedPapersButtonLabel}
+                  </a>
+                </div>
+              </div>
               <ul className="mt-7 flex flex-wrap gap-2.5 text-sm text-slate/78">
                 {hero.highlights.map((item) => (
                   <li
@@ -47,12 +68,14 @@ export default function Home() {
                 <a
                   href={hero.primaryCtaHref}
                   className="inline-flex items-center justify-center rounded-full bg-ink px-6 py-3 text-sm font-semibold text-white hover:bg-teal"
+                  {...externalLinkProps(hero.primaryCtaHref)}
                 >
                   {hero.primaryCtaLabel}
                 </a>
                 <a
                   href={hero.secondaryCtaHref}
                   className="inline-flex items-center justify-center rounded-full border border-line bg-white/80 px-6 py-3 text-sm font-semibold text-ink hover:border-teal hover:text-teal"
+                  {...externalLinkProps(hero.secondaryCtaHref)}
                 >
                   {hero.secondaryCtaLabel}
                 </a>
@@ -83,12 +106,13 @@ export default function Home() {
                   </div>
                   <div>
                     <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate/55">
-                      Submission
+                      Accepted Papers
                     </dt>
                     <dd className="mt-1">
                       <a
-                        href={links.submission}
+                        href={links.acceptedPapers}
                         className="font-semibold text-teal underline decoration-line underline-offset-4 hover:text-ink"
+                        {...externalLinkProps(links.acceptedPapers)}
                       >
                         {hero.submissionLabel}
                       </a>
@@ -224,8 +248,9 @@ export default function Home() {
                 </p>
               </div>
               <a
-                href={links.openReview}
+                href={links.acceptedPapers}
                 className="mt-6 inline-flex rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white hover:bg-teal"
+                {...externalLinkProps(links.acceptedPapers)}
               >
                 {sections.callForPapers.submitButtonLabel}
               </a>

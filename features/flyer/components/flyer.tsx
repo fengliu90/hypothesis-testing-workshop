@@ -15,6 +15,9 @@ function getInitials(name: string) {
     .toUpperCase();
 }
 
+const externalLinkProps = (href: string) =>
+  href.startsWith("http") ? { target: "_blank", rel: "noreferrer" } : {};
+
 function Headshot({
   src,
   name,
@@ -137,6 +140,7 @@ export function Flyer({ variant }: FlyerProps) {
   const isSocial = variant === "social";
   const { workshop, keynoteSpeakers, organizers, topics, importantDates, websiteUrl } =
     flyerData;
+  const acceptedPapersHref = workshop.links.acceptedPapers;
 
   return (
     <div className={`flyer-wrap ${isSocial ? "flyer-wrap-social" : "flyer-wrap-print"}`}>
@@ -195,10 +199,13 @@ export function Flyer({ variant }: FlyerProps) {
 
           <section className="flyer-submission mt-6 rounded-[28px] border border-teal/20 bg-[linear-gradient(135deg,rgba(15,118,110,0.08),rgba(255,255,255,0.94))] px-5 py-5 shadow-panel">
             <p className="text-[1rem] font-semibold leading-7 text-ink">
-              We invite submissions on modern hypothesis testing in machine learning.
+              Accepted workshop papers are now available on OpenReview.
             </p>
             <div className="mt-4 grid gap-4 md:grid-cols-[1fr_auto] md:items-center">
               <div className="flex flex-wrap gap-3 text-[0.88rem] text-slate/82">
+                <span className="rounded-full border border-line bg-white/85 px-3.5 py-2">
+                  Accepted papers online
+                </span>
                 <span className="rounded-full border border-line bg-white/85 px-3.5 py-2">
                   Short papers: 4 pages
                 </span>
@@ -209,16 +216,17 @@ export function Flyer({ variant }: FlyerProps) {
                   Posters + selected contributed talks
                 </span>
               </div>
-              {workshop.links.openReview.startsWith("http") ? (
+              {acceptedPapersHref.startsWith("http") ? (
                 <a
-                  href={workshop.links.openReview}
+                  href={acceptedPapersHref}
                   className="flyer-openreview inline-flex items-center justify-center rounded-full bg-ink px-5 py-2.5 text-sm font-semibold text-white"
+                  {...externalLinkProps(acceptedPapersHref)}
                 >
                   {workshop.sections.callForPapers.submitButtonLabel}
                 </a>
               ) : (
                 <div className="flyer-openreview inline-flex items-center justify-center rounded-full border border-ink/15 bg-ink px-5 py-2.5 text-sm font-semibold text-white">
-                  Submit via OpenReview
+                  Accepted papers
                   <span className="ml-2 text-white/70">Link forthcoming</span>
                 </div>
               )}
@@ -333,7 +341,7 @@ export function Flyer({ variant }: FlyerProps) {
                     Visit the Website
                   </p>
                   <p className="mt-2 text-[0.84rem] leading-6 text-slate/80">
-                    Scan for the full workshop page, updates, and submission details.
+                    Scan for the full workshop page, updates, and accepted papers.
                   </p>
                   <p className="mt-2 text-[0.8rem] leading-5 text-slate/68">
                     testing.ml
@@ -342,16 +350,17 @@ export function Flyer({ variant }: FlyerProps) {
               </div>
               <div className="justify-self-end">
                 <div className="mt-3">
-                  {workshop.links.openReview.startsWith("http") ? (
+                  {acceptedPapersHref.startsWith("http") ? (
                     <a
-                      href={workshop.links.openReview}
+                      href={acceptedPapersHref}
                       className="flyer-openreview inline-flex rounded-full border border-ink bg-ink px-4 py-2 text-sm font-semibold text-white"
+                      {...externalLinkProps(acceptedPapersHref)}
                     >
-                      Submit via OpenReview
+                      View Accepted Papers
                     </a>
                   ) : (
                     <div className="flyer-openreview inline-flex rounded-full border border-line bg-mist/50 px-4 py-2 text-sm font-semibold text-ink">
-                      Submit via OpenReview
+                      Accepted papers
                     </div>
                   )}
                 </div>
