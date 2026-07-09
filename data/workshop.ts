@@ -53,10 +53,6 @@ export const workshop = {
   },
   navigation: {
     items: [
-      {
-        label: "Accepted Papers",
-        href: "https://openreview.net/group?id=ICML.cc/2026/Workshop/Hypothesis_Testing",
-      },
       { label: "Why", href: "#why" },
       { label: "Topics", href: "#topics" },
       { label: "Speakers", href: "#speakers" },
@@ -226,9 +222,9 @@ export const workshop = {
           items: [
             { time: "09:00-09:05", title: "Opening remarks" },
             { time: "09:05-09:50", title: "Sequential Hypothesis Testing for Modern AI Systems: Computation, Robustness, and Online Monitoring (Yao Xie)" },
-            { time: "09:50-10:05", title: "Contributed Talk 1" },
+            { time: "09:50-10:05", title: "Contributed: Computational Safety for Generative AI: A Hypothesis Testing Approach" },
             { time: "10:05-10:50", title: "Valid Inference with Synthetic Data via Task Exchangeability (Tijana Zrnic)" },
-            { time: "10:50-11:05", title: "Contributed Talk 2" },
+            { time: "10:50-11:05", title: "Contributed: On the Game-Theoretic Nature of Optimality in Active Hypothesis Testing" },
             { time: "11:05-11:20", title: "Morning Tea Break" },
             { time: "11:20-12:05", title: "Statistical Tests of Dependence and Conditional Dependence (Arthur Gretton)" },
           ],
@@ -236,10 +232,10 @@ export const workshop = {
         {
           title: "Session 2: Important Sectors Related to Testing",
           items: [
-            { time: "13:15-13:30", title: "Contributed Talk 3" },
+            { time: "13:15-13:30", title: "In-Context Pure Exploration in Continuous Decision Spaces" },
             { time: "13:30-14:15", title: "Securing AI Agents: From Risk Assessment and Runtime Guardrails to Self-Improvement and Certification (remote) (Bo Li)" },
-            { time: "14:15-14:30", title: "Contributed Talk 4" },
-            { time: "14:30-14:45", title: "Contributed Talk 5" },
+            { time: "14:15-14:30", title: "Sequential Membership Inference Attacks" },
+            { time: "14:30-14:45", title: "Minimax-Optimal Kernel Two-sample Testing in Sub-quadratic Time" },
             { time: "14:45-15:30", title: "Learning Uncertainty Representations for Reliable Decision Making (Yisong Yue)" },
             {
               time: "15:30-16:25",
